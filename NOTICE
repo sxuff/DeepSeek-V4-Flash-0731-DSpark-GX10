@@ -1,0 +1,24 @@
+# Notice and attribution
+
+This repository contains benchmark harnesses, analysis code, documentation, and machine-readable results. It does not redistribute model weights or the DS4 runtime.
+
+## Model target
+
+- `tekosML/DeepSeek-V4-Flash-0731-GGUF-GX10`
+- Derived from `deepseek-ai/DeepSeek-V4-Flash-0731`
+- Exact repository and artifact revisions are recorded in `manifests/target.json`.
+- Review the model repository and source checkpoint for their applicable license and notices before downloading or redistributing weights.
+
+## DSpark drafter
+
+- `bleysg/DeepSeek-V4-Flash-DSpark-drafter-GGUF`
+- Exact revision and artifact digest are recorded in `manifests/drafter.json`.
+- Review the drafter repository for its applicable license and notices.
+
+## Runtime
+
+- `Entrpi/ds4` at the immutable revision recorded in `manifests/runtime.json`
+- This repository does not vendor DS4 source or binaries.
+- Review the upstream runtime repository for its license and attribution requirements.
+
+Repository-authored material is licensed under MIT unless a file states otherwise.

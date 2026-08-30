@@ -1,0 +1,70 @@
+{
+  "analysis": {
+    "fixture_statistic": "median across three measured repetitions",
+    "output_identity": "reported separately",
+    "overall_speedup": "geometric mean of four fixture-median ratios",
+    "quality": "frozen semantic validators",
+    "weighted_speed": "sum completion tokens divided by sum request wall seconds"
+  },
+  "arms": {
+    "dspark": "same target and runtime with the pinned 0731 Q2K/Q8 drafter; DS4_DSPARK_TRACE=1 and DS4_DSPARK_PROFILE=1 retained treatment-activity evidence",
+    "plain": "same target and runtime with --no-spec"
+  },
+  "claim_boundary": "The headline applies only to the structured JSON fixture. The full protocol does not support a quality-neutral deployment claim because DSpark introduced a repeated arithmetic regression.",
+  "eligibility": {
+    "continuous_path_required": true,
+    "dspark_no_engine_warning_forbidden": true,
+    "fallback_requests_required": 0,
+    "maximum_swap_growth_mib": 512,
+    "minimum_mem_available_gib": 6,
+    "persistent_batch_context_required": true,
+    "zero_runtime_errors": true
+  },
+  "frozen_inputs": {
+    "drafter": {
+      "bytes": 6971241504,
+      "file": "DSpark-drafter-Q2K-Q8-0731.gguf",
+      "repo": "bleysg/DeepSeek-V4-Flash-DSpark-drafter-GGUF",
+      "revision": "81c6fdd38f9582da45ba27f0ed7b63bcd3ea3b62",
+      "sha256": "8fa269560dc76fd73e4233ad9b1938b5f65dd363381fd9b1a5c6183f7d12d686"
+    },
+    "fixtures_sha256": "bb3b666cb7fa72d30390211f2b984a92a790b52341a4ef0ced53ccd2fe9bc421",
+    "runtime": {
+      "binary_sha256": "0289d6522e5ee15cb5082e0903cadecca4d9010d287a3ad187c34f274f9bd2cb",
+      "repo": "Entrpi/ds4",
+      "revision": "d183482b413ecd2e3b540b290e6497437e9fbb73",
+      "version": "v0.6.2"
+    },
+    "target": {
+      "bytes": 86720111552,
+      "file": "DeepSeek-V4-Flash-0731-IQ2XXS-w2Q2K-AProjQ8-SExpQ8-OutQ8-imatrix.gguf",
+      "repo": "tekosML/DeepSeek-V4-Flash-0731-GGUF-GX10",
+      "revision": "955036b188acfb10558be9977c44575d81e4bfe2",
+      "sha256": "73b86c93e7b0be37f68c4b3a5361c7e17f9b278647aa335ea304ac5dfd784867"
+    }
+  },
+  "operating_envelope": {
+    "concurrency": 1,
+    "context_tokens": 32768,
+    "continuous_banks": 2,
+    "repetitions_per_arm": 3,
+    "runtime_memory_floor_gib": 16,
+    "temperature": 0,
+    "warmups_per_fixture": 1
+  },
+  "request_contract": {
+    "endpoint": "/v1/chat/completions",
+    "matched_request_bytes": true,
+    "metric": "completion tokens divided by full non-streaming request wall time",
+    "min_p": 0,
+    "model": "deepseek-chat",
+    "repetitions_per_fixture": 3,
+    "stream": false,
+    "temperature": 0,
+    "top_p": 1,
+    "warmups_per_fixture": 1
+  },
+  "run_id": "normal-ds4-v4-20260830T135207Z",
+  "schema": "deepseek-v4-flash-0731-dspark-gx10-protocol-v1",
+  "scope": "Matched single-GX10 plain versus active DSpark study on the normal non-abliterated DeepSeek V4 Flash 0731 target"
+}

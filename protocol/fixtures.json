@@ -1,0 +1,76 @@
+{
+  "schema": "ds4-headroom-speed-fixtures-v1",
+  "speed": [
+    {
+      "id": "code_merge_intervals",
+      "max_tokens": 768,
+      "prompt": "Output only Python code. Implement def merge_intervals(intervals): for a list of [start, end] integer pairs. Return a new sorted list with all overlapping or touching intervals merged. Do not mutate the input. Include type hints, a docstring, and at least six assert-based examples after the function."
+    },
+    {
+      "id": "json_square_table",
+      "max_tokens": 1400,
+      "prompt": "Return only valid compact JSON, no Markdown. Produce an array of exactly 40 objects. Object i has exactly three keys in this order: id, label, square. id runs from 1 through 40, label is item-XX with a two-digit id, and square is id multiplied by itself."
+    },
+    {
+      "id": "reasoning_89",
+      "max_tokens": 768,
+      "prompt": "Solve this carefully: seven aisles each receive exactly one twelfth of a 144-crate shipment, then 5 additional crates are placed in inspection. Explain and independently verify the calculation in at least 20 numbered lines. End with exactly FINAL: 89."
+    },
+    {
+      "id": "prose_tracing",
+      "max_tokens": 1400,
+      "prompt": "Write exactly 12 paragraphs about debugging a distributed tracing pipeline. Each paragraph must be at least 35 words and must start with P1: through P12: in order. Cover instrumentation, propagation, sampling, clocks, queues, retries, storage, query plans, privacy, cost, incident response, and verification, one topic per paragraph."
+    }
+  ],
+  "quality": [
+    {
+      "id": "arithmetic_exact",
+      "max_tokens": 64,
+      "prompt": "Return only the integer result of 487 * 39 - 2764.",
+      "validator": "exact_16229"
+    },
+    {
+      "id": "json_exact",
+      "max_tokens": 128,
+      "prompt": "Return only valid JSON with exactly these keys: total, ascending. total is the sum of 91, 17, 63, and 28. ascending is those four integers sorted from smallest to largest.",
+      "validator": "json_exact"
+    },
+    {
+      "id": "sequence_100",
+      "max_tokens": 512,
+      "prompt": "Return the integers 1 through 100 in order, separated by commas. No other text.",
+      "validator": "sequence_100"
+    },
+    {
+      "id": "extract_records",
+      "max_tokens": 256,
+      "prompt": "Extract the records into a JSON array ordered by ticket. Return JSON only. Text: Ticket C-17 owner Mina severity high. Ticket A-04 owner Luis severity low. Ticket B-09 owner Noor severity medium. Each object must have exactly ticket, owner, severity.",
+      "validator": "extract_records"
+    },
+    {
+      "id": "tool_call",
+      "max_tokens": 256,
+      "prompt": "Use the calculator tool to multiply 37 by 23. Do not answer in prose.",
+      "validator": "tool_call",
+      "tools": true
+    },
+    {
+      "id": "code_hidden_tests",
+      "max_tokens": 768,
+      "prompt": "Output only Python code. Implement def merge_intervals(intervals): that merges overlapping or touching integer intervals, returns a sorted new list, and does not mutate the input.",
+      "validator": "code_hidden_tests"
+    },
+    {
+      "id": "reasoning_final",
+      "max_tokens": 512,
+      "prompt": "Seven aisles each receive exactly one twelfth of a 144-crate shipment, then 5 additional crates are placed in inspection. Explain briefly and end with FINAL: 89.",
+      "validator": "final_89"
+    },
+    {
+      "id": "five_lines",
+      "max_tokens": 384,
+      "prompt": "Write exactly five non-empty lines. They must start, in order, with INPUT:, CHECK:, RISK:, ACTION:, RESULT:. Each line must contain at least six words. No title or extra line.",
+      "validator": "five_lines"
+    }
+  ]
+}

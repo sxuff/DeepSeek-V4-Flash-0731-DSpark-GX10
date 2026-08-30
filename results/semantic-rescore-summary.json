@@ -1,0 +1,86 @@
+{
+  "dspark": {
+    "failed_quality": [
+      {
+        "detail": {
+          "last_integer": 18713,
+          "strict_exact": false
+        },
+        "fixture_id": "arithmetic_exact",
+        "rep": 1
+      },
+      {
+        "detail": {
+          "last_integer": 18713,
+          "strict_exact": false
+        },
+        "fixture_id": "arithmetic_exact",
+        "rep": 2
+      },
+      {
+        "detail": {
+          "last_integer": 18713,
+          "strict_exact": false
+        },
+        "fixture_id": "arithmetic_exact",
+        "rep": 3
+      },
+      {
+        "detail": {
+          "strict_json_envelope": false
+        },
+        "fixture_id": "extract_records",
+        "rep": 1
+      },
+      {
+        "detail": {
+          "strict_json_envelope": false
+        },
+        "fixture_id": "extract_records",
+        "rep": 2
+      },
+      {
+        "detail": {
+          "strict_json_envelope": false
+        },
+        "fixture_id": "extract_records",
+        "rep": 3
+      }
+    ],
+    "quality_passes": 18,
+    "quality_total": 24,
+    "speed_validator_passes": 10,
+    "speed_validator_total": 12
+  },
+  "paired_quality_regression_count": 3,
+  "plain": {
+    "failed_quality": [
+      {
+        "detail": {
+          "strict_json_envelope": false
+        },
+        "fixture_id": "extract_records",
+        "rep": 1
+      },
+      {
+        "detail": {
+          "strict_json_envelope": false
+        },
+        "fixture_id": "extract_records",
+        "rep": 2
+      },
+      {
+        "detail": {
+          "strict_json_envelope": false
+        },
+        "fixture_id": "extract_records",
+        "rep": 3
+      }
+    ],
+    "quality_passes": 21,
+    "quality_total": 24,
+    "speed_validator_passes": 9,
+    "speed_validator_total": 12
+  },
+  "schema": "semantic-rescore-summary-v1"
+}
