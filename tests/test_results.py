@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import json
+import hashlib
 import math
+import struct
 import unittest
 from pathlib import Path
 
@@ -51,6 +53,14 @@ class ResultContractTests(unittest.TestCase):
         self.assertEqual(safety["watchdog_incidents"], 0)
         self.assertTrue(self.analysis["dspark"]["continuous_path_confirmed"])
         self.assertEqual(self.analysis["dspark"]["fallback_requests"], 0)
+
+    def test_final_card_identity(self) -> None:
+        data = (ROOT / "card.png").read_bytes()
+        self.assertEqual(hashlib.sha256(data).hexdigest(), self.card["final_card"]["sha256"])
+        self.assertEqual(len(data), self.card["final_card"]["bytes"])
+        self.assertEqual(data[:8], b"\x89PNG\r\n\x1a\n")
+        width, height = struct.unpack(">II", data[16:24])
+        self.assertEqual((width, height), (1472, 1158))
 
 
 if __name__ == "__main__":

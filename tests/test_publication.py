@@ -42,10 +42,11 @@ class PublicationHygieneTests(unittest.TestCase):
         self.assertFalse(any(name.endswith(".log") for name in names))
         self.assertFalse((ROOT / "run").exists())
 
-    def test_readme_has_no_broken_card_reference(self) -> None:
+    def test_readme_card_reference_is_live(self) -> None:
         readme = (ROOT / "README.md").read_text()
-        self.assertNotIn("card.png", readme)
+        self.assertIn("card.png", readme)
         self.assertNotIn("result-card.png", readme)
+        self.assertTrue((ROOT / "card.png").is_file())
         self.assertIn("Quality boundary", readme)
 
 

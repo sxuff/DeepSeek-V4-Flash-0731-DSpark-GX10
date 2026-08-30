@@ -6,6 +6,12 @@
 - **Owner:** `sxuff`
 - **Future URL:** `https://github.com/sxuff/DeepSeek-V4-Flash-0731-DSpark-GX10`
 
+## Final card file
+
+- Filename: `card.png`
+- Dimensions: `1472 × 1158`
+- SHA-256: `5caf37db9a5998016c80cbee4053185a3167f18243b2ead93147e630b26b06e0`
+
 ## Exact card copy
 
 Use the previous 1600×900 DS4 card layout with these replacements:

@@ -1,5 +1,7 @@
 # DeepSeek V4 Flash 0731 at 46.39 tok/s on one GX10
 
+![DeepSeek V4 Flash 0731 DSpark benchmark](card.png)
+
 **Best measured result: 46.39 served-wall tok/s median versus a 21.32 tok/s plain baseline on the same normal, non-abliterated checkpoint. DSpark was 2.18x faster on the structured JSON fixture.**
 
 The comparison used the same target, Entrpi `ds4` runtime, request payloads, sampler, context, continuous-bank configuration, and ASUS GX10. The DSpark arm added the pinned drafter and enabled DSpark trace/profile counters to prove treatment activity; the plain arm used `--no-spec`.

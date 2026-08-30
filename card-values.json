@@ -5,6 +5,13 @@
     "plain_median": 21.322550405748803,
     "speedup_x": 2.1756202937382736
   },
+  "final_card": {
+    "bytes": 239722,
+    "filename": "card.png",
+    "height": 1158,
+    "sha256": "5caf37db9a5998016c80cbee4053185a3167f18243b2ead93147e630b26b06e0",
+    "width": 1472
+  },
   "github_owner": "sxuff",
   "hardware": "1\u00d7 ASUS GX10 \u00b7 GB10",
   "hero_unit": "SERVED-WALL TOK/S",
