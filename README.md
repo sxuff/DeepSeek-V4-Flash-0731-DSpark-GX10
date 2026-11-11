@@ -1,5 +1,13 @@
 # DeepSeek V4 Flash 0731 at 46.39 tok/s on one GX10
 
+## Run it
+
+```bash
+git clone https://github.com/sxuff/DeepSeek-V4-Flash-0731-DSpark-GX10 && cd DeepSeek-V4-Flash-0731-DSpark-GX10 && ./run.sh
+```
+
+Expected: **46.39 tok/s** served-wall median on the structured-JSON fixture, single stream (21.32 tok/s without DSpark) — receipt: [`results/structured-json-receipt.json`](results/structured-json-receipt.json)
+
 ![DeepSeek V4 Flash 0731 DSpark benchmark](card.png)
 
 **Best measured result: 46.39 served-wall tok/s median versus a 21.32 tok/s plain baseline on the same normal, non-abliterated checkpoint. DSpark was 2.18x faster on the structured JSON fixture.**
